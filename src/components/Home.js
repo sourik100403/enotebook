@@ -1,9 +1,10 @@
-import React from 'react'
+import Notes from './Notes';
 
-const Home = () => {
+const Home = (props) => {
+  const {showAlert}=props;
   return (
     <div>
-      <h1>this is home of my enotebook app</h1>
+      <Notes showAlert={showAlert}/>
     </div>
   )
 }
