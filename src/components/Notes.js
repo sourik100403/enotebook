@@ -29,7 +29,7 @@ const Notes = (props) => {
         setNote({id:currentNote._id, etitle:currentNote.title,edescription:currentNote.description,etag:currentNote.tag});
     }
     const handleClick=(e)=>{
-        console.log("updating the note",note)
+        // console.log("updating the note",note)
         editNote(note.id,note.etitle,note.edescription,note.etag);
         refClose.current.click();
         props.showAlert("Updated Successfully",'success');
@@ -84,8 +84,7 @@ const Notes = (props) => {
                 {notes.length===0 && 'no notes avaiable'}
                 </div>
                 {notes.map((note) => {
-                    console.log(note._id);
-                    console.log(note.id)
+                    // console.log(note._id);
                     return <Noteitem key={note._id} updateNote={updateNote} showAlert={props.showAlert} note={note} />
                 })}
             </div>

@@ -19,7 +19,7 @@ const NoteState = (props) => {
       },
     });
     const json=await response.json();
-    console.log(json);
+    // console.log(json);
     setNotes(json)
   }
 
@@ -55,11 +55,12 @@ const NoteState = (props) => {
         // 'Content-Type': 'application/x-www-form-urlencoded',
       },
     });
-    const json= response.json(); // parses JSON response into native JavaScript objects
-    console.log(json);
+    // eslint-disable-next-line
+    const json=await response.json(); // parses JSON response into native JavaScript objects
+    // console.log(json);
   
     //logic to delete note
-    console.log("delete note with id"+id)
+    // console.log("delete note with id"+id)
     const newNotes=notes.filter((note)=>{
      return note._id!==id
     })
